@@ -65,8 +65,8 @@ def org_includes(user, org):
 # Takes a repo in the form 'org/repo-name' and a pr number string or int
 def get_changed_files(repo, pr_num):
     """ Get list of modified files for pull request """
-    g = conn()
-    pull = g.get_repo(repo).get_pull(int(pr_num))
+    ghc = conn()
+    pull = ghc.get_repo(repo).get_pull(int(pr_num))
     filename_list = []
     for prfile in pull.get_files():
         filename = prfile.filename
