@@ -40,8 +40,8 @@ def linter(diff_file_list):
         return True, ""
 
     print "Running pylint against " + " ".join(file_list)
-    success, stdout = common.run_cli_cmd(["/usr/bin/pylint", "--rcfile=" + PYLINT_RCFILE] + file_list,
-                                         exit_on_fail=False)
+    pylint_cmd = ["/usr/bin/pylint", "--rcfile=" + PYLINT_RCFILE] + file_list
+    success, stdout = common.run_cli_cmd(pylint_cmd, exit_on_fail=False)
     if not success:
         return False, "Pylint failed:\n" + stdout
     return True, ""
