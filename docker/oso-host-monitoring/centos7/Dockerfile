@@ -68,6 +68,10 @@ RUN yum clean metadata && \
         openvswitch \
         python-psutil \
         pylint \
+        tito \
+        python-devel \
+        libyaml-devel \
+        python-ruamel-yaml \
         python-pygithub \
         docker-python && \
     yum clean all

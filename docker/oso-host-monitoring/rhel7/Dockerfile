@@ -62,6 +62,10 @@ RUN yum clean metadata && \
         openvswitch \
         python-psutil \
         pylint \
+        tito \
+        python-devel \
+        libyaml-devel \
+        python-ruamel-yaml \
         python-pygithub \
         docker-python && \
     yum install -y gcloud --disablerepo="oso-rhui-rhel-server-releases-optional" && \
