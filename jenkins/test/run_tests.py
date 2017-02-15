@@ -300,6 +300,8 @@ def main():
     """ Get the pull request data, merge changes, assign env, and run validators """
     # Get the pull request json from the defined env variable
     pull_request_json = os.getenv("PULL_REQUEST", "")
+    print "FAILURE"
+    sys.exit(1)
     if pull_request_json == "":
         print 'No JSON data provided in $PULL_REQUEST environment variable'
         sys.exit(1)
