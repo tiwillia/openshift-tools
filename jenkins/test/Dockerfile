@@ -12,9 +12,9 @@ ADD whitelist/ /whitelist/
 # ENV OO_PAUSE_ON_START=true
 
 RUN mkdir /validator && \
-    git clone https://github.com/openshift/openshift-tools /validator/openshift-tools && \
+    git clone https://github.com/tiwillia/openshift-tools /validator/openshift-tools && \
     cd /validator/openshift-tools && \
-    git checkout stg && \
+    git checkout mergebuilds_testing && \
     git config user.name validator && \
     git config user.email validator@localhost && \
     export PYTHONPATH=/validator/openshift-tools/jenkins/lib:$PYTHONPATH && \

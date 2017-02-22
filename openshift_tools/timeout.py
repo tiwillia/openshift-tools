@@ -20,7 +20,7 @@ import signal
 from functools import wraps
 
 class TimeoutException(Exception):
-    ''' For raising timeouts '''
+    ''' For raising timeouts SOME TEST CHANGE'''
     pass
 
 def timed(seconds):

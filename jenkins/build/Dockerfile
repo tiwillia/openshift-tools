@@ -16,9 +16,9 @@ ADD s3-access/ /s3-access/
 
 RUN mkdir /builder && \
     git config --global push.default simple && \
-    git clone https://github.com/openshift/openshift-tools /builder/openshift-tools && \
+    git clone https://github.com/tiwillia/openshift-tools /builder/openshift-tools && \
     cd /builder/openshift-tools && \
-    git checkout stg && \
+    git checkout mergebuilds_testing && \
     cd /builder && \
     export PYTHONPATH=/builder/openshift-tools/jenkins/lib:$PYTHONPATH && \
     /usr/bin/python /builder/openshift-tools/jenkins/build/run_builds.py
